@@ -362,15 +362,15 @@ export default function App() {
     <div className={`min-h-screen w-full flex flex-col relative ${!role ? 'blur-sm pointer-events-none' : ''}`} style={{ background: "var(--bg)" }}>
       <div className="top-curve-border"></div>
       <div className="bottom-curve-border"></div>
-      <img src="/src/assets/mandala.svg" alt="" className="app-mandala-left" />
-      <img src="/src/assets/mandala.svg" alt="" className="app-mandala-right" />
-      <img src="/src/assets/mandala.svg" alt="" className="app-mandala-top-left" />
-      <img src="/src/assets/mandala.svg" alt="" className="app-mandala-bottom-right" />
+      <img src="/assets/mandala.svg" alt="" className="app-mandala-left" />
+      <img src="/assets/mandala.svg" alt="" className="app-mandala-right" />
+      <img src="/assets/mandala.svg" alt="" className="app-mandala-top-left" />
+      <img src="/assets/mandala.svg" alt="" className="app-mandala-bottom-right" />
 
       <header className="flex items-center justify-center p-4">
         <div className="flex items-center gap-4">
-          <img src="/src/assets/tatvai-logo.png" alt="TatvAI Logo" className="w-35 h-35 rounded-full" />
-          <img src="/src/assets/name_title.png" alt="TatvAI Name" className="h-16" />
+          <img src="/assets/tatvai-logo.png" alt="TatvAI Logo" className="w-35 h-35 rounded-full" />
+          <img src="/assets/name_title.png" alt="TatvAI Name" className="h-16" />
         </div>
       </header>
 

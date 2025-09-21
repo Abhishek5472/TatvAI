@@ -16,17 +16,17 @@ export default function LoginPage({ onLogin }) {
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center relative" style={{ background: 'var(--bg)' }}>
       {/* Re-using your decorative elements for a consistent feel */}
-      <img src="/src/assets/mandala.svg" alt="Decoration" className="app-mandala-bottom-left" />
-      <img src="/src/assets/mandala.svg" alt="Decoration" className="app-mandala-top-right" />
-      <img src="/src/assets/mandala.svg" alt="Decoration" className="app-mandala-top-left" />
-      <img src="/src/assets/mandala.svg" alt="Decoration" className="app-mandala-bottom-right" />
+      <img src="/assets/mandala.svg" alt="Decoration" className="app-mandala-bottom-left" />
+      <img src="/assets/mandala.svg" alt="Decoration" className="app-mandala-top-right" />
+      <img src="/assets/mandala.svg" alt="Decoration" className="app-mandala-top-left" />
+      <img src="/assets/mandala.svg" alt="Decoration" className="app-mandala-bottom-right" />
       <div className="top-curve-border"></div>
       <div className="bottom-curve-border"></div>
 
       <div className="text-center p-8">
         <div className="flex items-center justify-center gap-4 mb-8">
-          <img src="/src/assets/title.png" alt="TatvAI Logo" className="w-24 h-24 rounded-full" />
-          <img src="/src/assets/name_title.png" alt="TatvAI Name" className="h-16" />
+          <img src="/assets/title.png" alt="TatvAI Logo" className="w-24 h-24 rounded-full" />
+          <img src="/assets/name_title.png" alt="TatvAI Name" className="h-16" />
         </div>
 
         <h1 className="text-2xl font-semibold text-[--text] mb-2">Welcome to TatvAI</h1>
