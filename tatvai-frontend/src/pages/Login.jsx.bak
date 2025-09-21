@@ -1,0 +1,44 @@
+import React, { useState } from "react";
+
+export default function Login({ onLogin }) {
+  const [role, setRole] = useState("general");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onLogin(role); // pass role back to App.jsx
+  };
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-tatvai-dark transition-colors">
+      <div className="p-10 rounded-3xl shadow-lg bg-gray-100 dark:bg-black max-w-md w-full">
+        <h2 className="text-3xl font-cinzel text-center text-tatvai-dark dark:text-tatvai-gold mb-6">
+          Welcome to TatvAI
+        </h2>
+
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label className="block text-gray-700 dark:text-tatvai-accent mb-2">
+              Select your role:
+            </label>
+            <select
+              value={role}
+              onChange={(e) => setRole(e.target.value)}
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-tatvai-dark text-gray-800 dark:text-tatvai-accent"
+            >
+              <option value="journalist">🖋 Journalist</option>
+              <option value="student">📚 Student</option>
+              <option value="general">🌍 General Reader</option>
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            className="w-full py-3 rounded-xl bg-tatvai-gold text-white font-bold hover:bg-yellow-500 transition"
+          >
+            Enter TatvAI
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}

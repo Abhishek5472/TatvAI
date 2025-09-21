@@ -1,0 +1,83 @@
+import { useState } from "react";
+
+function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  return (
+    <div className={darkMode ? "dark" : ""}>
+      <div className="bg-gray-100 dark:bg-gray-900 min-h-screen text-gray-900 dark:text-gray-100">
+        
+        {/* Navbar */}
+        <nav className="flex justify-between items-center px-6 py-4 shadow-md bg-white dark:bg-gray-800">
+          <h1 className="text-2xl font-bold text-yellow-600">TatvAI</h1>
+          <ul className="hidden md:flex space-x-6">
+            <li><a href="#hero" className="hover:text-yellow-600">Home</a></li>
+            <li><a href="#trending" className="hover:text-yellow-600">Trending</a></li>
+            <li><a href="#about" className="hover:text-yellow-600">About</a></li>
+          </ul>
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="px-3 py-1 bg-yellow-600 text-white rounded-lg"
+          >
+            {darkMode ? "Light" : "Dark"}
+          </button>
+        </nav>
+
+        {/* Main Content */}
+        <main className="flex-1 p-6">
+          {/* Hero Section */}
+          <section id="hero" className="text-center py-12">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to TatvAI</h1>
+            <p className="text-lg md:text-xl mb-6">
+              Ancient Wisdom meets Modern AI — Summarized, Personalized, and Powerful News.
+            </p>
+            <a
+              href="#trending"
+              className="px-6 py-3 bg-yellow-600 text-white rounded-lg shadow hover:bg-yellow-700"
+            >
+              Explore Trending News
+            </a>
+          </section>
+
+          {/* Trending Section */}
+          <section id="trending" className="py-12">
+            <h2 className="text-3xl font-bold mb-6 text-center">🔥 Trending News</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Example Card */}
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-5 hover:shadow-lg transition">
+                <h3 className="text-xl font-semibold mb-2">AI in India’s Education</h3>
+                <p className="text-sm mb-3">
+                  AI adoption in classrooms is growing fast, helping students and teachers alike...
+                </p>
+                <button className="text-yellow-600 hover:underline">Read More →</button>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-5 hover:shadow-lg transition">
+                <h3 className="text-xl font-semibold mb-2">Markets Surge Ahead</h3>
+                <p className="text-sm mb-3">
+                  Stock markets recorded a sharp rise today, driven by global investor confidence...
+                </p>
+                <button className="text-yellow-600 hover:underline">Read More →</button>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-5 hover:shadow-lg transition">
+                <h3 className="text-xl font-semibold mb-2">Cricket World Cup Updates</h3>
+                <p className="text-sm mb-3">
+                  Fans cheer as India enters the semi-finals with an unbeaten streak...
+                </p>
+                <button className="text-yellow-600 hover:underline">Read More →</button>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        {/* Footer */}
+        <footer className="text-center py-4 bg-white dark:bg-gray-800 shadow-inner">
+          <p>© 2025 TatvAI. All Rights Reserved.</p>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
+export default App;
